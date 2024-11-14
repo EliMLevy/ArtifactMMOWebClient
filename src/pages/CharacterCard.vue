@@ -207,7 +207,7 @@
 
 <script setup lang="ts">
 import { useAppStore } from "@/stores/app";
-import { hydrateOnIdle, PropType } from "vue";
+import { PropType } from "vue";
 import AddActionsForm from "./AddActionsForm.vue";
 
 const props = defineProps({

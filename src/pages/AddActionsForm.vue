@@ -311,7 +311,7 @@ const slotCodes = [
     "utility2",
 ];
 
-const presets = {
+const presets: {[key: string]: any} = {
     "Mine and Smelt Copper": [
         { state: "copy queue" },
         { state: "move", params: locations.bank },
@@ -369,8 +369,10 @@ async function handleActionSubmit() {
     loading.value = false;
 }
 
-function loadPreset(presentName) {
-	console.log(presets[presentName])
-	pendingStates.value = presets[presentName]
+function loadPreset(presetName: string | null) {
+    if (presetName) {
+        console.log(presets[presetName])
+        pendingStates.value = presets[presetName]
+    }
 }
 </script>
